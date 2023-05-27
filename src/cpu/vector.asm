@@ -23,6 +23,16 @@ DC.L             STACK_ERROR
 DC.L             ADDRESS_ERROR
 DC.L             ILLEGAL_INSTRUCTION
 
+;; INTERRUPT REQUEST HANDLERS
+
+DC.L             IRQ_1
+DC.L             IRQ_2
+DC.L             IRQ_3
+DC.L             IRQ_4 ;; VDP HBLANK
+DC.L             IRQ_5
+DC.L             IRQ_6 ;; VDP VBLANK
+DC.L             IRQ_7
+
 ;; MATHEMATICAL EXCEPTION HANDLERS
 
 DC.L             ZERO_DIV
