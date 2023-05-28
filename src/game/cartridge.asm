@@ -20,7 +20,11 @@ CARTRIDGE:          MACRO
 CONSOLE:            DC.B 'SEGA GENESIS         '
 COPYRIGHT:          DC.B '(C) SEGA 1993.SEP    '
 TITLE:              DC.B 'SONIC SPINBALL       '
-COUNTRY_CODE:       DC.B 'U                    '
+COUNTRY_CODE_US:    DC.B 'U                    '
+COUNTRY_CODE_JP:    DC.W $2A3F, DC.B 'J        ' 
 
                     ENDM
 
+;----------------------------------------------------------
+;                       END OF FILE
+;----------------------------------------------------------
