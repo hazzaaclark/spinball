@@ -7,6 +7,8 @@
 ;----------------------------------------------------------
 ; 
 ;    THIS FILE IS FOR DEFINING THE M68K'S VECTOR TABLE
+;    THE VECTOR TABLE IS THE DATA STRUCTURE THAT HOUSES
+;            THE PROCESSORS INTERRUPT HANLDERS
 ;
 ;----------------------------------------------------------
 
@@ -22,20 +24,29 @@ DC.L             BUS_ERROR
 DC.L             STACK_ERROR
 DC.L             ADDRESS_ERROR
 DC.L             ILLEGAL_INSTRUCTION
+DC.L             BRA_OR_SET_UC
+DC.L             INEXACT_RESULT
+DC.L             UNDERFLOW
+DC.L             OVERFLOW
+DC.L             NAN_SIG
+DC.L             MMU_CONFIG_ERROR
+DC.L             MMU_ACCESS_ERROR
+
 
 ;; INTERRUPT REQUEST HANDLERS
 
 DC.L             IRQ_1
 DC.L             IRQ_2
 DC.L             IRQ_3
-DC.L             IRQ_4 ;; VDP HBLANK
+DC.L             IRQ_4     ;; VDP HBLANK
 DC.L             IRQ_5
-DC.L             IRQ_6 ;; VDP VBLANK
+DC.L             IRQ_6     ;; VDP VBLANK
 DC.L             IRQ_7
 
 ;; MATHEMATICAL EXCEPTION HANDLERS
 
 DC.L             ZERO_DIV
+DC.L             DVIDE
 DC.L             CHECK_EXC
 DC.L             TRAP_V_EXC
 DC.L             PRIVILAGE_EXC
@@ -70,3 +81,7 @@ DC.L             TRAP_12
 DC.L             TRAP_13
 DC.L             TRAP_14
 DC.L             TRAP_15
+
+;----------------------------------------------------------
+;                       END OF FILE
+;----------------------------------------------------------
