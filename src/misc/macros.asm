@@ -13,9 +13,9 @@ ARG_VALUE:      EQU 1
 
 @LOOP\@         DC.B 1, %ARG_VALUE, 0
                 DC.B 1, %ARG_VALUE, \2
-				BNE.S @LOOP\@
+		BNE.S @LOOP\@
 
-				ENDM 
+		ENDM 
 
 ;----------------------------------------------------------
 ;                       END OF FILE
